@@ -1,4 +1,4 @@
-FROM debian:8
+FROM debian:9
 
 ARG MAKE_JOBS=1
 
