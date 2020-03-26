@@ -24,6 +24,8 @@ RUN apt-get update && apt-get install --no-install-recommends -y  \
 
 RUN mkdir -p /opt/kaldi && \
     git clone https://github.com/kaldi-asr/kaldi /opt/kaldi && \
+    cd /opt/kaldi && \
+    git reset --hard e5a5a2869c0f91a5db1a9bb0d8ce06bffe82898d && \
     cd /opt/kaldi/tools && \
     make -j${MAKE_JOBS} && \
     ./install_portaudio.sh && \
