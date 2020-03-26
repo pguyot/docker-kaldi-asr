@@ -7,15 +7,18 @@ RUN apt-get update && apt-get install --no-install-recommends -y  \
     automake \
     bzip2 \
     g++ \
+    gfortran \
     git \
     libatlas3-base \
     libtool-bin \
     make \
     patch \
+    python-pip \
     python2.7 \
     python3 \
-    python-pip \
+    sox \
     subversion \
+    unzip \
     wget \
     zlib1g-dev && \
     apt-get clean && \
@@ -27,6 +30,7 @@ RUN mkdir -p /opt/kaldi && \
     cd /opt/kaldi && \
     git reset --hard e5a5a2869c0f91a5db1a9bb0d8ce06bffe82898d && \
     cd /opt/kaldi/tools && \
+    bash extras/install_mkl.sh && \
     make -j${MAKE_JOBS} && \
     ./install_portaudio.sh && \
     cd /opt/kaldi/src && \
