@@ -54,10 +54,12 @@ RUN mkdir -p /opt/kaldi && \
 	 -type f \
 	 -not -name '*.h' \
 	 -not -name '*.so' \
+	 -not -executable \
 	 -delete && \
     find /opt/kaldi/tools/ \
 	 -type f \
 	 -not -name '*.h' \
 	 -not -name '*.so' \
 	 -not -name '*.so*' \
+	 -not -executable \
 	 -delete
