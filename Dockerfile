@@ -49,7 +49,7 @@ RUN mkdir -p /opt/kaldi && \
 	util && \
     cd /opt/kaldi && git log -n1 > current-git-commit.txt && \
     rm -rf /opt/kaldi/.git && \
-    rm -rf /opt/kaldi/egs/ /opt/kaldi/windows/ /opt/kaldi/misc/ && \
+    rm -rf /opt/kaldi/windows/ /opt/kaldi/misc/ && \
     find /opt/kaldi/src/ \
 	 -type f \
 	 -not -name '*.h' \
