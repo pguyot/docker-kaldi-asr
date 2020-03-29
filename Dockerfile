@@ -42,6 +42,7 @@ RUN mkdir -p /opt/kaldi && \
     make -j${MAKE_JOBS} mklibdir && \
     make -j${MAKE_JOBS} \
 	base \
+	bin \
 	decoder \
 	fstext \
 	fstbin \
