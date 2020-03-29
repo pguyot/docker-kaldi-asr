@@ -45,7 +45,7 @@ RUN mkdir -p /opt/kaldi && \
 	bin \
 	decoder \
 	fstext \
-	fstbin \
+	fstbin \
 	nnet3 \
 	online2 \
 	util && \
