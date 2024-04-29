@@ -2,6 +2,9 @@ FROM debian:9
 
 ARG MAKE_JOBS=1
 
+RUN echo "deb http://archive.debian.org/debian stretch main" > /etc/apt/sources.list && \
+    echo "deb http://archive.debian.org/debian-security stretch/updates main" >> /etc/apt/sources.list
+
 RUN apt-get update && apt-get install --no-install-recommends -y  \
     autoconf \
     automake \
